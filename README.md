@@ -1,5 +1,5 @@
 # Drumbox
-Thisi is a basic Javascript based drumpad. I made this for learning Javascript, inspird by a youtube video. can't remember so decided to make it myself.
+A Basic JavaScript Based Drum Pad.
 
 # Features!
   - 6 diffrent sounds! 

@@ -21,3 +21,8 @@ https://nikhil-web.github.io/Drumpad-Vanilla-JS-DEMO/
 
 # Screenshot
 ![Alt text](https://www.isostellar.in/beta/screenshot.jpg "Drumbox")
+
+# Improvements.
+  - Performance, Reduced lag.
+  - performance, Optimized(less resource usage).
+  - Appearance, Improved Bubble Animation. 

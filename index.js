@@ -31,32 +31,26 @@ window.addEventListener("load", () => {
 
   document.addEventListener("keypress", function(e){
     if(e.keyCode == 65){
-      console.log("A");
       play_sound(0);
       createBubble(0);
       animate_pad(0);
     }else if(e.keyCode == 83){
-      console.log("s");
       play_sound(1);
       createBubble(1);
       animate_pad(1);
     }else if(e.keyCode == 68){
-      console.log("d");
       play_sound(2);
       createBubble(2);
       animate_pad(2);
     }else if(e.keyCode == 70){
-      console.log("f");
       play_sound(3);
       createBubble(3);
       animate_pad(3);
     }else if(e.keyCode == 71){
-      console.log("g");
       play_sound(4);
       createBubble(4);
       animate_pad(4);
     }else if(e.keyCode == 72){
-      console.log("h");
       play_sound(5);
       createBubble(5);
       animate_pad(5);
@@ -68,12 +62,10 @@ window.addEventListener("load", () => {
   });
 
 
-function play_sound(ind){
+async function play_sound(ind){
   var audio_var = sound_array[ind];
   var audio = new Audio(audio_var);
-  audio.play();
-  console.log(audio_var);
-  
+  audio.play();  
 }
 
   function animate_pad(i){

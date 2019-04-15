@@ -13,18 +13,19 @@ window.addEventListener("load", () => {
 
 
   const sound_array = [
-    "sounds/bubbles.mp3",
-    "sounds/clay.mp3",
-    "sounds/confetti.mp3",
-    "sounds/glimmer.mp3",
-    "sounds/moon.mp3",
-    "sounds/ufo.mp3"
+    "sounds/kick.wav",
+    "sounds/cymbal.wav",
+    "sounds/snare.wav",
+    "sounds/openhat.wav",
+    "sounds/long-crash.wav",
+    "sounds/hihat.wav"
   ];
 
   pads.forEach((pad, index) => {
     pad.addEventListener("click", function() {
       play_sound(index);
       createBubble(index);
+      animate_pad(index);
     });
   });
 
@@ -61,17 +62,24 @@ window.addEventListener("load", () => {
 
   });
 
+for(let index = 0; index < sound_array.length; index++) {
+var audio_var = sound_array[index];
+var audio = new Audio(audio_var);
+audio.load();
+}
+
 
 async function play_sound(ind){
   var audio_var = sound_array[ind];
   var audio = new Audio(audio_var);
+  audio.load();
   audio.play();  
 }
 
-  function animate_pad(i){
-    pads[i].style.animation = `dance 0.1s ease`;
-    pads[i].addEventListener("animationend", function() {
-      pads[i].style.animation = 'none';
+  function animate_pad(index){
+    pads[index].style.animation = `dance 0.1s ease`;
+    pads[index].addEventListener("animationend", function() {
+      pads[index].style.animation = 'none';
     });
 }
 
